@@ -1,7 +1,7 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 $main-spacing;
+ 
   
 }
 
@@ -9,13 +9,6 @@ img {
   max-width: 100%;
 }
 
-.app--images {
-  margin: $main-spacing 0;
-}
-
-.app--description {
-  margin-bottom: $main-spacing;
-}
 body
 {
     background-color: $color-primary;

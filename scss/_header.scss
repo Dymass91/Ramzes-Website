@@ -1,8 +1,8 @@
 .header {
   background-color: $color-primary;
   color: #fff;
-  padding: $main-spacing 0;
-  margin-bottom: $main-spacing;
+
+
 
   .header--content {
     display: flex;
@@ -10,7 +10,6 @@
   }
 
   .header--logo {
-    margin-right: $main-spacing / 2;
-    width: $main-spacing * 2;
+
   }
 }
