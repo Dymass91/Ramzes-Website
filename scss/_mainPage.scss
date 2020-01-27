@@ -2,3 +2,25 @@ body
 {
     background-color: $color-primary;
 }
+main
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.Buttons
+{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+ 
+    width: 100vw;
+}
+.Primary_btn
+{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+   
+}
