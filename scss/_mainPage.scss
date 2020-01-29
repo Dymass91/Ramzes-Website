@@ -4,24 +4,12 @@ body
 }
 main
 {
-    width: 100vw;
+    margin-left: 10%;
+    width: 80%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.Buttons
-{
-    display: flex;
-    justify-items: center;
-    justify-content: center;
- 
-    width: 100vw;
-}
-.btn__blog,.btn__projects
-{
-    margin: 2rem;
-    display: flex;
-    flex-direction: row;
-   z-index: 1;
-}
+
+

@@ -468,7 +468,8 @@ body {
 }
 
 main {
-  width: 100vw;
+  margin-left: 10%;
+  width: 80%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,29 +480,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.Buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100vw;
-}
-
-.btn__blog, .btn__projects {
-  margin: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  z-index: 1;
 }
 
 .container {
@@ -534,71 +512,50 @@ body {
 .btn__blog {
   background-color: #777;
   color: white;
-  cursor: pointer;
   padding: 18px;
-  width: 100%;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
+  z-index: 2;
 }
 
-.active, .btn__blog:hover {
-  background-color: #555;
+.btn__blog, .btn__projects {
+  width: 200px;
 }
 
-.btn__blog:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
+.btn__blog .active {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .overlay {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 95%;
+  position: absolute;
+  top: 20%;
   background-color: rgba(255, 255, 255, 0.692);
   -webkit-transition: 1s;
   transition: 1s;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .overlay.active {
-  -webkit-transform: scale(100, 200);
-          transform: scale(100, 200);
-}
-
-.menu {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  visibility: hidden;
-}
-
-.menu.active {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: 20%;
+  opacity: 1;
   visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */
