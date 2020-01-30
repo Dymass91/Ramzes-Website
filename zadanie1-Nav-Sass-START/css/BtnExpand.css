@@ -1,4 +1,25 @@
-.btn__blog {
+.buttons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.buttons.active {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: fade 1s linear;
+          animation: fade 1s linear;
+}
+
+.btn__blog, .btn__projects {
   background-color: #777;
   color: white;
   padding: 18px;
@@ -7,44 +28,67 @@
   outline: none;
   font-size: 15px;
   z-index: 2;
-}
-
-.btn__blog, .btn__projects {
-  width: 200px;
-}
-
-.btn__blog .active {
-  position: absolute;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .overlay {
-  width: 75%;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 20%;
-  background-color: rgba(255, 255, 255, 0.692);
+  background-color: #fff;
   -webkit-transition: 1s;
   transition: 1s;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
 }
 
 .overlay.active {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
   -webkit-transition: 1s;
   transition: 1s;
-  top: 20%;
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
   opacity: 1;
   visibility: visible;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=BtnExpand.css.map */
