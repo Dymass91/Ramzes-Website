@@ -5,6 +5,7 @@ const btnBlog = document.querySelector('.btn__blog')
 const active = document.querySelector('.active')
 const buttons = document.querySelector('.buttons')
 const btnProject = document.querySelector('.btn__projects')
+const navbar = document.querySelector('.topnav')
 
 const expand = () => {
 
@@ -12,6 +13,7 @@ const expand = () => {
     btnBlog.classList.toggle('active');
     btnProject.classList.toggle('active');
     buttons.classList.toggle('active');
+    navbar.classList.toggle('active');
 };
 
 
