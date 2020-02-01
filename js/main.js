@@ -14,19 +14,24 @@ const expand = () => {
     btnProject.classList.toggle('active');
     buttons.classList.toggle('active');
     navbar.classList.toggle('active');
+
+    const delayInMilliseconds = 200;
+
+
+    setTimeout(function () {
+        if (btnBlog.textContent == 'Blog') {
+            btnBlog.textContent = "Main Page";
+            btnBlog.style.marginLeft = `${-12}%`;
+        }
+        else {
+            btnBlog.textContent = 'Blog'
+            btnBlog.style.marginLeft = 0;
+        }
+    }, delayInMilliseconds);
+
 };
 
 
 btnBlog.addEventListener('click', expand);
 
-// if (btnBlog == active) {
 
-//     overlay.style.backgroundColor = 'red';
-//     overlay.style.height = '100%';
-
-// }
-// else if (btnBlog !== active) {
-//     overlay.style.backgroundColor = 'red';
-
-//     overlay.style.height = '0%';
-// }
