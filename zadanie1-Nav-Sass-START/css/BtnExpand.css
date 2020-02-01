@@ -15,8 +15,8 @@
   z-index: 2;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: fade 1s linear;
-          animation: fade 1s linear;
+  -webkit-animation: fade .8s linear;
+          animation: fade .8s linear;
 }
 
 .btn__blog, .btn__projects {
@@ -46,7 +46,7 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  10% {
+  20% {
     opacity: 0;
     left: 50%;
     top: 50%;
@@ -73,7 +73,7 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  10% {
+  20% {
     opacity: 0;
     left: 50%;
     top: 50%;

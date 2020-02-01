@@ -13,7 +13,7 @@
   transform: translate(0,0);
 z-index: 2;
 transition: 1s;
-animation: fade 1s linear;
+animation: fade .8s linear;
 }
 
   .btn__blog, .btn__projects
@@ -44,7 +44,7 @@ animation: fade 1s linear;
     top: 50%;
     transform: translate(-50%,-50%);
   }
-  10%{    
+  20%{    
     opacity:0;
     left: 50%;
     top: 50%;

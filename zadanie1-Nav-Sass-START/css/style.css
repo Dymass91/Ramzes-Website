@@ -470,51 +470,37 @@ body {
 main {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .overlay {
+  bottom: -100%;
   width: 100%;
-  height: 100%;
+  height: 0;
   position: absolute;
   background-color: #fff;
-  -webkit-transition: 1s;
-  transition: 1s;
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
-  -webkit-animation: overlayIn 1s linear;
-          animation: overlayIn 1s linear;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
 }
 
 .overlay.active {
-  display: block;
+  bottom: 0;
+  height: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
-  opacity: 1;
-  visibility: visible;
-  -webkit-animation: overlayIn 1.7s linear;
-          animation: overlayIn 1.7s linear;
 }
 
 @-webkit-keyframes overlayIn {
   from {
-    opacity: 0;
   }
   to {
-    opacity: 1;
   }
 }
 
 @keyframes overlayIn {
   from {
-    opacity: 0;
   }
   to {
-    opacity: 1;
   }
 }
 
@@ -545,6 +531,26 @@ body {
           align-items: center;
 }
 
+.header .header__backgroung {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #878f97;
+}
+
+.header .header__backgroung #bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-position: right bottom;
+  -webkit-transform: scale(1.14) scaleX(-1);
+          transform: scale(1.14) scaleX(-1);
+}
+
 .buttons {
   position: absolute;
   left: 50%;
@@ -555,50 +561,34 @@ body {
 
 .buttons.active {
   position: fixed;
-  top: 1%;
+  top: 0.5%;
   left: 1%;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   z-index: 2;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: fade 1s linear;
-          animation: fade 1s linear;
+  -webkit-animation: fade .8s linear;
+          animation: fade .8s linear;
 }
 
 .btn__blog, .btn__projects {
   background-color: #777;
   color: white;
   padding: 18px;
+  height: 50px;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
   z-index: 2;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #fff;
-  -webkit-transition: 1s;
-  transition: 1s;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
-}
-
-.overlay.active {
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
-  opacity: 1;
-  visibility: visible;
+.btn__blog.active, .btn__projects.active {
+  height: 40px;
+  line-height: 6px;
 }
 
 @-webkit-keyframes fade {
@@ -609,7 +599,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  10% {
+  20% {
     opacity: 0;
     left: 50%;
     top: 50%;
@@ -618,12 +608,12 @@ body {
   }
   90% {
     opacity: 0;
-    top: 2%;
+    top: 1%;
     left: 2%;
   }
   100% {
     opacity: 1;
-    top: 1%;
+    top: 0.5%;
     left: 1%;
   }
 }
@@ -636,7 +626,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  10% {
+  20% {
     opacity: 0;
     left: 50%;
     top: 50%;
@@ -645,12 +635,12 @@ body {
   }
   90% {
     opacity: 0;
-    top: 2%;
+    top: 1%;
     left: 2%;
   }
   100% {
     opacity: 1;
-    top: 1%;
+    top: 0.5%;
     left: 1%;
   }
 }
@@ -682,8 +672,8 @@ body {
   visibility: visible;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: navIn 1s linear;
-          animation: navIn 1s linear;
+  -webkit-animation: navIn 0.3s linear;
+          animation: navIn 0.3s linear;
 }
 
 .topnav a {
@@ -732,11 +722,9 @@ body {
   from {
     width: 100%;
     top: -50px;
-    opacity: 0;
   }
   to {
     top: 0;
-    opacity: 1;
   }
 }
 
@@ -744,11 +732,9 @@ body {
   from {
     width: 100%;
     top: -50px;
-    opacity: 0;
   }
   to {
     top: 0;
-    opacity: 1;
   }
 }
 
@@ -756,12 +742,10 @@ body {
   from {
     width: 100%;
     top: 0px;
-    opacity: 1;
   }
   to {
     width: 100%;
     top: -50px;
-    opacity: 0;
   }
 }
 
@@ -769,12 +753,10 @@ body {
   from {
     width: 100%;
     top: 0px;
-    opacity: 1;
   }
   to {
     width: 100%;
     top: -50px;
-    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

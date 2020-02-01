@@ -18,3 +18,15 @@ const expand = () => {
 
 
 btnBlog.addEventListener('click', expand);
+
+// if (btnBlog == active) {
+
+//     overlay.style.backgroundColor = 'red';
+//     overlay.style.height = '100%';
+
+// }
+// else if (btnBlog !== active) {
+//     overlay.style.backgroundColor = 'red';
+
+//     overlay.style.height = '0%';
+// }

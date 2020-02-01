@@ -12,4 +12,23 @@
   .header--logo {
 
   }
+
+  .header__backgroung{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(135, 143, 151);
+  }
+  
+  .header__backgroung #bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  background-repeat: no-repeat;
+    z-index: 0;
+        background-position: right bottom; 
+        transform: scale(1.14) scaleX(-1);
+    }
 }
