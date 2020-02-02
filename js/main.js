@@ -21,11 +21,11 @@ const expand = () => {
     setTimeout(function () {
         if (btnBlog.textContent == 'Blog') {
             btnBlog.textContent = "Main Page";
-            btnBlog.style.marginLeft = `${-12}%`;
+
         }
         else {
             btnBlog.textContent = 'Blog'
-            btnBlog.style.marginLeft = 0;
+
         }
     }, delayInMilliseconds);
 

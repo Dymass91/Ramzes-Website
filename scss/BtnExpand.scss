@@ -1,19 +1,18 @@
 .buttons
 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  transition: .5s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: .3s;
 }
 .buttons.active
 {
   position: fixed;
-  top: 0.5%;
+  top: 25px;
+ left: 40px;
  
- align-items: flex-start;
- justify-content: flex-start;
+
 z-index: 2;
 
 animation: fade .8s linear;
@@ -25,7 +24,7 @@ margin: 30px;
 }
   .btn__blog, .btn__projects
   {
-    margin: 30px;
+
     width: 200px;
     text-align: center;
     background-color: #777;
@@ -50,24 +49,26 @@ margin: 30px;
 {
   0%{   
     opacity:1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     
   }
   20%{    
-    display: flex;
+
     opacity:0;
-    align-items: center;
-  justify-content: center;
-  
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
   }
   90%{   
     opacity:0;
+    top: 25px;
+    left: 40px;
   }
   100%{    
     opacity:1;
-    top: 0.5%;
-  
+    top: 25px;
+    left: 40px;
   }
 }
