@@ -17,21 +17,29 @@ const expand = () => {
 
     const delayInMilliseconds = 200;
 
-
     setTimeout(function () {
         if (btnBlog.textContent == 'Blog') {
             btnBlog.textContent = "Main Page";
-
         }
         else {
             btnBlog.textContent = 'Blog'
-
         }
     }, delayInMilliseconds);
 
 };
 
 
+
 btnBlog.addEventListener('click', expand);
 
+// if (btnBlog == active) {
 
+//     overlay.style.backgroundColor = 'red';
+//     overlay.style.height = '100%';
+
+// }
+// else if (btnBlog !== active) {
+//     overlay.style.backgroundColor = 'red';
+
+//     overlay.style.height = '0%';
+// }
