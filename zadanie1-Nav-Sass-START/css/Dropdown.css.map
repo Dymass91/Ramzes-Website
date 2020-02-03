@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CACJ;EACI,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,KAAK;CACzB",
-    "sources": [
-        "../../scss/Dropdown.scss"
-    ],
-    "names": [],
-    "file": "Dropdown.css"
-}

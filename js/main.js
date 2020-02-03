@@ -15,7 +15,7 @@ const expand = () => {
     buttons.classList.toggle('active');
     navbar.classList.toggle('active');
 
-    const delayInMilliseconds = 200;
+    const delayInMilliseconds = 300;
 
     setTimeout(function () {
         if (btnBlog.textContent == 'Blog') {
