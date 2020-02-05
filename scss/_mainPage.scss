@@ -14,16 +14,26 @@ main
  background-color: white;
  flex-basis: auto;
 }
+.container
+{
+  display: flex;
+  flex: 10;
+  flex-wrap: wrap;
+flex-flow: row-reverse;
+}
+.blog__section
+{
+  flex-basis: 80%;
+}
 .overlay
 {
+	display: 		flex;
+
+flex-wrap: wrap;
   padding: 2rem;
-  display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
   bottom: -100%;
-  width: 90%;
-  padding: 5%;
   height: 0;
   position: absolute;
     transition: 1.3s;
@@ -35,6 +45,15 @@ main
    transition: 1s;
    background-color: white;
 }
+aside
+{
+  display: flex;
+  background-color: rgb(128, 128, 128);
+  flex-basis: 20%;
+  height: 100%;
+ flex-flow: wrap-reverse;
+  flex: 3;
+}
 
 img{
   width: 100%;
@@ -42,8 +61,10 @@ img{
 
 .blog-post
 {
+  flex: 7;
   margin-top: 10rem;
-  width: 60%;
+  width: 90%;
+  margin-left: 10%;
   max-width: 98rem;
   background-color: #fff;
 box-shadow: 0 1.4erem 8 rem rgba(0,0,0,.2);
@@ -159,4 +180,19 @@ border-radius: .8rem;
     max-width: 100%;
     transform: translate(0, -8rem);
   }
+}
+
+@media (min-width: 600px)
+{
+main{
+
+}
+  
+  
+aside{
+
+  
+
+}
+  
 }
