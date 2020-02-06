@@ -124,6 +124,7 @@ border-radius: .8rem;
   margin-bottom: 1.5rem;
   font-size: 1rem;
   color: rgba(0,0,0,.7);
+  width: 90%;
 }
 .blog-post__cta
 {
@@ -156,6 +157,35 @@ border-radius: .8rem;
     max-width: 30rem;
   }
 }
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
 @media screen and (max-width: 868px)
 {
   .blog-post{
