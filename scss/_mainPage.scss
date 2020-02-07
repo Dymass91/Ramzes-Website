@@ -47,7 +47,6 @@ flex-wrap: wrap;
 }
 aside
 {
-  margin-top: 10rem;
   display: flex;
   background-color: rgb(128, 128, 128);
   flex-basis: 20%;
@@ -63,7 +62,7 @@ img{
 .blog-post
 {
   flex: 7;
-  margin-top: 10rem;
+  margin-top: 1rem;
   width: 90%;
   margin-left: 10%;
   max-width: 98rem;
