@@ -507,6 +507,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 2rem;
@@ -662,12 +664,10 @@ img {
 }
 
 .align-left {
-  float: left;
   margin-right: 20px;
 }
 
 .align-right {
-  float: right;
   margin-left: 20px;
 }
 
@@ -687,7 +687,7 @@ img {
           transform: translateX(30%) scale(0.95);
 }
 
-.slide-in.active {
+.slide-in .active {
   opacity: 1;
   -webkit-transform: translateX(0%) scale(1);
           transform: translateX(0%) scale(1);
