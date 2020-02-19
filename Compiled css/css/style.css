@@ -662,6 +662,23 @@ img {
   transition: 1s;
 }
 
+.slide-in {
+  opacity: 0;
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+}
+
+.align-right {
+  -webkit-transform: translateX(30%) scale(0.95);
+          transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+}
+
 @media screen and (max-width: 1068px) {
   .blog-post {
     max-width: 80rem;

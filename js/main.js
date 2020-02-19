@@ -1,4 +1,6 @@
 
+
+
 const toggle = document.querySelector('.toggle')
 const overlay = document.querySelector('.overlay')
 const btnBlog = document.querySelector('.btn__blog')
@@ -45,5 +47,45 @@ btnBlog.addEventListener('click', expand);
 //     overlay.style.height = '0%';
 // }
 
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+const sliderPosts = document.querySelectorAll('.slide-in')
+
+function checkSlide() {
+
+    sliderPosts.forEach(sliderPost => {
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderPost.height / 2;
+
+        console.log(slideInAt)
+        const postBottom = sliderPost.offsetTop + sliderPost.height;
+
+        const isHalfShown = slideInAt > sliderPost.offsetTop;
+        const isNotScrolledPast = window.scrollY < postBottom;
 
 
+
+        if (isHalfShown && isNotScrolledPast) {
+            sliderPost.classList.add('.active')
+            console.log('nie widzi')
+        }
+        else {
+            sliderPost.classList.remove('.active')
+            console.log('nie widzi 2 ')
+        }
+    });
+}
+
+window.addEventListener('scroll', debounce(checkSlide));
