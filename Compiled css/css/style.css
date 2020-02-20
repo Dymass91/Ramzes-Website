@@ -568,6 +568,7 @@ img {
   -webkit-box-flex: 7;
       -ms-flex: 7;
           flex: 7;
+  height: 300px;
   margin-top: 3rem;
   width: 90%;
   margin-left: 10%;
@@ -662,13 +663,28 @@ img {
   transition: 1s;
 }
 
-.slide-in {
-  opacity: 0;
-  -webkit-transform: translateX(0%) scale(1);
-          transform: translateX(0%) scale(1);
+.align-left {
+  float: left;
+  margin-right: 20px;
 }
 
 .align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  -webkit-transform: translateX(-30%) scale(0.95);
+          transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
   -webkit-transform: translateX(30%) scale(0.95);
           transform: translateX(30%) scale(0.95);
 }

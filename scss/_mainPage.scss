@@ -72,7 +72,9 @@ img{
 
 .blog-post
 {
+
   flex: 7;
+  height: 300px;
   margin-top: 3rem;
   width: 90%;
   margin-left: 10%;
@@ -155,16 +157,31 @@ border-radius: .8rem;
   background-image: linear-gradient(to right, #00fe7f 0%,#28776D 100%);
   transition: 1s;
 }
-.slide-in{
-  opacity: 0;
-  transform: translateX(0%) scale(1);
+
+.align-left {
+  float: left;
+  margin-right: 20px;
 }
-.align-right
-{
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
   transform: translateX(30%) scale(0.95);
 }
 
-.slide-in.active{
+.slide-in.active {
   opacity: 1;
   transform: translateX(0%) scale(1);
 }

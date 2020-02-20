@@ -67,9 +67,11 @@ const sliderPosts = document.querySelectorAll('.slide-in')
 function checkSlide() {
 
     sliderPosts.forEach(sliderPost => {
-        const slideInAt = (window.scrollY + window.innerHeight) - sliderPost.height / 2;
+        let slideInAt = (window.scrollY + window.innerHeight) - sliderPost.height / 2;
 
         console.log(slideInAt)
+
+
         const postBottom = sliderPost.offsetTop + sliderPost.height;
 
         const isHalfShown = slideInAt > sliderPost.offsetTop;
@@ -78,12 +80,11 @@ function checkSlide() {
 
 
         if (isHalfShown && isNotScrolledPast) {
-            sliderPost.classList.add('.active')
-            console.log('nie widzi')
+            sliderPost.classList.add('active')
+            console.log('widzi')
         }
         else {
-            sliderPost.classList.remove('.active')
-            console.log('nie widzi 2 ')
+            sliderPost.classList.remove('active')
         }
     });
 }
