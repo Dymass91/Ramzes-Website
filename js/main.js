@@ -8,9 +8,12 @@ const active = document.querySelector('.active')
 const buttons = document.querySelector('.buttons')
 const btnProject = document.querySelector('.btn__projects')
 const navbar = document.querySelector('.topnav')
+const blogPost = document.querySelector('.blog-post')
 
 const body = document.querySelector('body');
 const btnRefresh = document.querySelector('.refresh')
+
+const sliderPosts = document.querySelectorAll('.slide-in')
 
 const expand = () => {
 
@@ -35,12 +38,12 @@ const expand = () => {
 
 btnBlog.addEventListener('click', expand);
 
-// if (btnBlog == active) {
+if (btnBlog == active) {
 
-//     overlay.style.backgroundColor = 'red';
-//     overlay.style.height = '100%';
-
-// }
+    overlay.style.backgroundColor = 'red';
+    overlay.style.height = '100%';
+    blogPost.classList.add('.slide-in active')
+}
 // else if (btnBlog !== active) {
 //     overlay.style.backgroundColor = 'red';
 
@@ -62,7 +65,9 @@ function debounce(func, wait = 20, immediate = true) {
     };
 };
 
-const sliderPosts = document.querySelectorAll('.slide-in')
+
+
+
 
 function checkSlide() {
 
