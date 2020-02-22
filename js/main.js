@@ -8,7 +8,7 @@ const active = document.querySelector('.active')
 const buttons = document.querySelector('.buttons')
 const btnProject = document.querySelector('.btn__projects')
 const navbar = document.querySelector('.topnav')
-const blogPost = document.querySelector('.blog-post')
+const blogPosts = document.querySelectorAll('.blog-post')
 
 const body = document.querySelector('body');
 const btnRefresh = document.querySelector('.refresh')
@@ -28,9 +28,14 @@ const expand = () => {
     setTimeout(function () {
         if (btnBlog.textContent == 'Blog') {
             btnBlog.textContent = "Main Page";
+
+            blogPosts.forEach(blogPost => {
+                blogPost.classList.add('active')
+            })
         }
         else {
             btnBlog.textContent = 'Blog'
+            blogPost.classList.remove('active')
         }
     }, delayInMilliseconds);
 
@@ -38,17 +43,6 @@ const expand = () => {
 
 btnBlog.addEventListener('click', expand);
 
-if (btnBlog == active) {
-
-    overlay.style.backgroundColor = 'red';
-    overlay.style.height = '100%';
-    blogPost.classList.add('.slide-in active')
-}
-// else if (btnBlog !== active) {
-//     overlay.style.backgroundColor = 'red';
-
-//     overlay.style.height = '0%';
-// }
 
 function debounce(func, wait = 20, immediate = true) {
     var timeout;
@@ -69,29 +63,29 @@ function debounce(func, wait = 20, immediate = true) {
 
 
 
-function checkSlide() {
+// function checkSlide() {
 
-    sliderPosts.forEach(sliderPost => {
-        let slideInAt = (window.scrollY + window.innerHeight) - sliderPost.height / 2;
+//     sliderPosts.forEach(sliderPost => {
+//         let slideInAt = (window.scrollY + window.innerHeight) - sliderPost.height / 2;
 
-        console.log(slideInAt)
-
-
-        const postBottom = sliderPost.offsetTop + sliderPost.height;
-
-        const isHalfShown = slideInAt > sliderPost.offsetTop;
-        const isNotScrolledPast = window.scrollY < postBottom;
+//         console.log(slideInAt)
 
 
+//         const postBottom = sliderPost.offsetTop + sliderPost.height;
 
-        if (isHalfShown && isNotScrolledPast) {
-            sliderPost.classList.add('active')
-            console.log('widzi')
-        }
-        else {
-            sliderPost.classList.remove('active')
-        }
-    });
-}
+//         const isHalfShown = slideInAt > sliderPost.offsetTop;
+//         const isNotScrolledPast = window.scrollY < postBottom;
+
+
+
+//         if (isHalfShown && isNotScrolledPast) {
+//             sliderPost.classList.add('active')
+//             console.log('widzi')
+//         }
+//         else {
+//             sliderPost.classList.remove('active')
+//         }
+//     });
+// }
 
 window.addEventListener('scroll', debounce(checkSlide));

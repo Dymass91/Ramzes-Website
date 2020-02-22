@@ -572,7 +572,6 @@ img {
   width: 90%;
   margin-left: 10%;
   max-width: 98rem;
-  background-color: #fff;
   -webkit-box-shadow: 0 1.4erem 8 rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1.4erem 8 rem rgba(0, 0, 0, 0.2);
   display: -webkit-box;
@@ -660,6 +659,13 @@ img {
   background-image: linear-gradient(to right, #00fe7f 0%, #28776D 100%);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.slide-inPrimary {
+  opacity: 1;
+  width: 200px;
+  height: 200px;
+  background-color: #000000;
 }
 
 .align-left {
