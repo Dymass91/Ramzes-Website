@@ -541,21 +541,23 @@ main {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: wrap-reverse;
-          flex-flow: wrap-reverse;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
 .aside__top {
+  width: 200px;
+  height: 100vh;
   margin-top: 3rem;
   background-color: #32f8ff;
 }
 
 .aside__bottom {
+  width: 200px;
+  height: 100vh;
   margin-top: 3rem;
   background-color: cadetblue;
 }

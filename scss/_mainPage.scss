@@ -53,16 +53,20 @@ flex-wrap: wrap;
   display: flex;
   flex-basis: 20%;
   height: 100%;
- flex-flow: wrap-reverse;
+ flex-flow: wrap;
   flex: 3;
 }
 .aside__top
 {
+  width: 200px;
+  height: 100vh;
   margin-top: 3rem;
   background-color: rgb(50, 248, 255);
 }
 .aside__bottom
 {
+  width: 200px;
+  height: 100vh;
   margin-top: 3rem;
   background-color: cadetblue;
 }

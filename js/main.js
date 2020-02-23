@@ -9,7 +9,7 @@ const buttons = document.querySelector('.buttons')
 const btnProject = document.querySelector('.btn__projects')
 const navbar = document.querySelector('.topnav')
 const blogPosts = document.querySelectorAll('.blog-post')
-const asideTop = document.querySelector('.aside__bottom')
+const asideTop = document.querySelector('.aside__top')
 
 const body = document.querySelector('body');
 const btnRefresh = document.querySelector('.refresh')
