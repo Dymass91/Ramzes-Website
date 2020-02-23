@@ -9,6 +9,7 @@ const buttons = document.querySelector('.buttons')
 const btnProject = document.querySelector('.btn__projects')
 const navbar = document.querySelector('.topnav')
 const blogPosts = document.querySelectorAll('.blog-post')
+const asideTop = document.querySelector('.aside__bottom')
 
 const body = document.querySelector('body');
 const btnRefresh = document.querySelector('.refresh')
@@ -25,17 +26,33 @@ const expand = () => {
 
     const delayInMilliseconds = 300;
 
+
+    function setActiveClass() {
+        blogPosts.forEach(blogPost => {
+            setTimeout(function () {
+                blogPost.classList.add('active')
+                asideTop.classList.add('active')
+            }, delayInMilliseconds);
+        })
+    }
+
+    function removeActiveClass() {
+        blogPosts.forEach(blogPost => {
+            blogPost.classList.remove('active')
+        })
+    }
+
     setTimeout(function () {
         if (btnBlog.textContent == 'Blog') {
             btnBlog.textContent = "Main Page";
 
-            blogPosts.forEach(blogPost => {
-                blogPost.classList.add('active')
-            })
+            setActiveClass()
+
         }
         else {
             btnBlog.textContent = 'Blog'
-            blogPost.classList.remove('active')
+            removeActiveClass()
+            asideTop.classList.remove('active')
         }
     }, delayInMilliseconds);
 
@@ -88,4 +105,4 @@ function debounce(func, wait = 20, immediate = true) {
 //     });
 // }
 
-window.addEventListener('scroll', debounce(checkSlide));
+// window.addEventListener('scroll', debounce(checkSlide));
