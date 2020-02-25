@@ -46,6 +46,7 @@ const expand = () => {
         if (btnBlog.textContent == 'Blog') {
             btnBlog.textContent = "Main Page";
 
+
             setActiveClass()
 
         }
