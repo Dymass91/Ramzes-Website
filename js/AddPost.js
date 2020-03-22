@@ -7,7 +7,7 @@ const input = document.querySelector('input');
 
 const removePost = (e) => {
     e.target.parentNode.remove();
-    taskNumber.textContent = listItems.length;
+    PostNumber.textContent = listItems.length;
     console.log("titlePost");
 }
 
@@ -16,11 +16,10 @@ const addPost = (e) => {
     const titlePost = input.value;
     console.log(titlePost);
 
-    if (titleTask === "") return;
-
+    if (titlePost === "") return;
 
     const Post = document.createElement('li');
-    Post.className = 'task';
+    Post.className = 'Post';
     Post.innerHTML = titlePost + "<button>Usuń</button>";
     ul.appendChild(Post);
     input.value = "";
