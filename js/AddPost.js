@@ -1,9 +1,9 @@
 
 const form = document.querySelector('form');
 const PostNumber = document.querySelector('h1 span');
-const listItems = document.getElementsByClassName('Post');
+const listItems = document.getElementsByClassName('New-post');
 const ul = document.querySelector('ul');
-const input = document.querySelector('input');
+const input = document.querySelector('.Text_holder-input');
 
 const removePost = (e) => {
     e.target.parentNode.remove();
@@ -19,7 +19,7 @@ const addPost = (e) => {
     if (titlePost === "") return;
 
     const Post = document.createElement('li');
-    Post.className = 'Post';
+    Post.className = 'New-post';
     Post.innerHTML = titlePost + "<button>Usuń</button>";
     ul.appendChild(Post);
     input.value = "";
