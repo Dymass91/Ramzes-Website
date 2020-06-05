@@ -917,14 +917,41 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 20vw;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60vw;
+  margin: 10px;
+  padding: 5px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: red;
+  background-color: white;
+}
+
+.New-Name {
+  font-size: 20px;
+  margin-right: 1rem;
+  width: 200px;
+  background-color: white;
+  padding: 5px;
+  line-height: 30px;
+}
+
+.New-Topic {
+  font-size: 20px;
+  margin-right: 1rem;
+  width: 200px;
+  background-color: white;
+  padding: 5px;
+  line-height: 30px;
+}
+
+.blog__section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blog-post {
@@ -955,17 +982,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: green;
+  background-color: #bbbbbb;
   padding: 10px;
 }
 
-.Text_holder-input {
+.message-field {
+  margin: 10px;
   width: 20vw;
   height: 10vh;
   display: -webkit-box;
@@ -973,5 +1001,6 @@ body {
   display: flex;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

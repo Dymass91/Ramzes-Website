@@ -1,12 +1,36 @@
 .New-post
 {
     display: flex;
-flex-direction: row;
-width: 20vw;
-flex-wrap: wrap;
-background-color: red;
-}
+flex-direction: column;
+width: 60vw;
+margin: 10px;
+padding: 5px;
 
+flex-wrap: wrap;
+background-color: rgb(255, 255, 255);
+}
+.New-Name
+{
+font-size: 20px;
+margin-right: 1rem;
+width: 200px;
+background-color: white;
+padding: 5px;
+line-height: 30px;
+}
+.New-Topic
+{
+    font-size: 20px;
+    margin-right: 1rem;
+    width: 200px;
+    background-color: white;
+    padding: 5px;
+    line-height: 30px;
+}
+.blog__section
+{
+    flex-direction: column;
+}
 .blog-post 
 {
 
@@ -26,17 +50,20 @@ border-radius: .8rem;
 ul{
     width: 60vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    background-color: green;
+    background-color: rgb(187, 187, 187);
     padding: 10px;
+   
 }
 }
 
-.Text_holder-input
+.message-field
 {
+    margin: 10px;
     width: 20vw;
     height: 10vh;
     display: flex;
     align-content: flex-start;
+    padding: 10px;
 }
